@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tamakiii-sandbox/hello-google-apps-script/issues"
   },
-  "homepage": "https://github.com/tamakiii-sandbox/hello-google-apps-script#readme"
+  "homepage": "https://github.com/tamakiii-sandbox/hello-google-apps-script#readme",
+  "dependencies": {
+    "@google/clasp": "^2.3.0"
+  }
 }
