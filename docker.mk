@@ -14,7 +14,7 @@ install: \
 	build
 
 install-dev: \
-	@development \
+	development \
 	install
 
 build:
@@ -30,8 +30,8 @@ dependencies:
 .env:
 	echo "ENVIRONMENT=$(ENVIRONMENT)" > $@
 
-@development:
-	$(eval ENVIRONMENT := development)
+development:
+	$(eval ENVIRONMENT := $@)
 
 clean: down
 	docker-compose images -q | xargs docker image rm
