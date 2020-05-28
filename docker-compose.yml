@@ -1,6 +1,8 @@
 version: "3.7"
 services:
   node:
-    build: .
+    build:
+      context: .
+      target: ${ENVIRONMENT:-production-pseudo}
     volumes:
       - .:/usr/local/app/hello-google-apps-script
