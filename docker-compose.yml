@@ -1,0 +1,6 @@
+version: "3.7"
+services:
+  node:
+    build: .
+    volumes:
+      - .:/usr/local/app/hello-google-apps-script
