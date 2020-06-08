@@ -1,4 +1,4 @@
-.PHONY: help install dependencies login clean
+.PHONY: help install dependencies clean
 
 help:
 	@cat $(firstword $(MAKEFILE_LIST))
@@ -8,14 +8,10 @@ install: \
 	node_modules
 
 dependencies:
-	type npx > /dev/null
-
-login:
-	npx clasp login --no-localhost
+	type npm > /dev/null
 
 node_modules:
 	npm install
 
 clean:
 	rm -rf node_modules
-
