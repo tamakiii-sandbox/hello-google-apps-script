@@ -6,3 +6,7 @@ services:
       target: ${ENVIRONMENT:-production-pseudo}
     volumes:
       - .:/usr/local/app/hello-google-apps-script
+      - homedir:/root
+
+volumes:
+  homedir:
