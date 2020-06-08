@@ -6,7 +6,13 @@ services:
       target: ${ENVIRONMENT:-production-pseudo}
     volumes:
       - .:/usr/local/app/hello-google-apps-script
+      - ~/.config/gcloud:/root/.config/gcloud
       - homedir:/root
+
+  gcloud:
+    image: gcr.io/google.com/cloudsdktool/cloud-sdk:latest
+    volumes:
+      - ~/.config/gcloud:/root/.config/gcloud
 
 volumes:
   homedir:
